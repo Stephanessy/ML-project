@@ -2,16 +2,22 @@
 
 ```bash
 ├── data 
-    └── clean_validation_data.h5 // this is clean data used to evaluate the BadNet and design the backdoor defense
-    └── clean_test_data.h5
+    ├── clean_validation_data.h5 // this is clean data used to evaluate the BadNet and design the backdoor defense
+    ├── clean_test_data.h5
     └── sunglasses_poisoned_data.h5
 ├── models
-    └── anonymous_bd_net.h5
-    └── anonymous_bd_weights.h5
-    └── sunglasses_bd_net.h5
+    ├── anonymous_bd_net.h5
+    ├── anonymous_bd_weights.h5
+    ├── sunglasses_bd_net.h5
     └── sunglasses_bd_weights.h5
+├── utils
+    └── strip
+	    ├── entropy_cal.py
+        ├── process_data.py
+        └── super_impose.py
 ├── architecture.py
-└── eval.py // this is the evaluation script
+├── eval.py // this is the evaluation script
+└── strip_eval.py // use strip to repair the model
 ```
 
 ## I. Dependencies
@@ -35,11 +41,11 @@
       E.g., `python3 eval.py data/clean_validation_data.h5  models/sunglasses_bd_net.h5`.
    3. Clean data classification accuracy on the provided validation dataset for sunglasses_bd_net.h5 is 97.87 %.
 
-## IV. Evaluating the Submissions
-To aid teams in designing their defense, here are a few guidelines to keep in mind to get maximum points for the submission:  
-   1. Defense should generalize well to other backdoored networks. To verify the defense generalizability, the organizers will evaluate the submission on a specially curated BadNet, anonymous_bd_net.h5, with different trigger properties. 
-   2. Teams gain maximum points if the defense greatly reduces attack success rate on the trigger(s) while maintaining high clean classification accuracy.
-   3. Points will also be given to teams that identify poisoned images in the online test stream of images.
-   4. Fewer points will be allocated to teams that only detect the network as clean or backdoored.
-   5. Report should contain a description of the defense performance on adaptive attackers.
+## IV. Evaluating STRIP method 
+   1. The threshold is the same for all models. You can either use the precomputed threshold or compute the threshold again (you will get the same threshold anyway)
+   2. To evaluate the backdoored model, execute `strip_eval.py` by running:  
+      `python3 strip_eval.py <clean validation data directory> <test data directory> <model directory> <mode>`.
+      
+      E.g., `python3 strip_eval.py data/clean_validation_data.h5 data/sunglasses_poisoned_data.h5 models/sunglasses_bd_net.h5 quick`.
+   3. There are 2 modes provided: `quick` and `normal`. In `quick` mode, precomputed threshold is used, whereas in `normal` mode, threshold is computed again. `quick` mode is highly recommanded.
 
