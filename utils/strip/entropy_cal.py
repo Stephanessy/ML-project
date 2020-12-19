@@ -1,6 +1,7 @@
 import scipy
+import scipy.stats
 import numpy as np
-import tqdm.notebook as tq
+from tqdm import tqdm
 
 from utils.strip.super_impose import superImpose
 
@@ -52,7 +53,7 @@ def getEntropyList(x_test, x_valid, model, overlay_weight=0.5, back_weight=0.9):
     """
     entropy = []
     n_test = len(x_test)
-    for j in tq.tqdm(range(n_test)):
+    for j in tqdm(range(n_test)):
         x_background = x_test[j]
         entropy.append(entropyCal(x_background, x_valid, model, overlay_weight, back_weight))
     return entropy
