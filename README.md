@@ -22,11 +22,11 @@
 
 ## I. Dependencies
    1. Python 3.6.9
-   2. Keras 2.3.1
-   3. Numpy 1.16.3
-   4. Matplotlib 2.2.2
-   5. H5py 2.9.0
-   6. TensorFlow-gpu 1.15.2
+   2. Keras 2.4.3
+   3. Numpy 1.19.4
+   4. Matplotlib 3.2.2
+   5. H5py 2.10.0
+   6. TensorFlow-gpu 2.4.0
    
 ## II. Validation Data
    1. Download the validation and test datasets from [here](https://drive.google.com/drive/folders/13o2ybRJ1BkGUvfmQEeZqDo1kskyFywab?usp=sharing) and store them under `data/` directory.
