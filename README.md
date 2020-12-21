@@ -49,4 +49,5 @@
       
       E.g., `python3 strip_eval.py data/clean_validation_data.h5 data/sunglasses_poisoned_data.h5 models/sunglasses_bd_net.h5 quick`.
    3. There are 2 modes provided: `quick` and `normal`. In `quick` mode, precomputed threshold is used, whereas in `normal` mode, threshold is computed again. `quick` mode is recommanded if you want short running time and dataset is still YouTube Aligned Face Dataset.
+   4. Please note that `result` at last of `strip_eval.py` is the output array with N+1 classes, meanwhile it will output a .csv file with results.
 
