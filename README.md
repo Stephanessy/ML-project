@@ -11,7 +11,7 @@
     ├── sunglasses_bd_net.h5
     └── sunglasses_bd_weights.h5
 ├── utils
-    └── strip
+    └── strip //record functions used in STRIP method.
 	├── entropy_cal.py
         ├── process_data.py
         └── super_impose.py
@@ -47,5 +47,5 @@
       `python3 strip_eval.py <clean validation data directory> <test data directory> <model directory> <mode>`.
       
       E.g., `python3 strip_eval.py data/clean_validation_data.h5 data/sunglasses_poisoned_data.h5 models/sunglasses_bd_net.h5 quick`.
-   3. There are 2 modes provided: `quick` and `normal`. In `quick` mode, precomputed threshold is used, whereas in `normal` mode, threshold is computed again. `quick` mode is highly recommanded.
+   3. There are 2 modes provided: `quick` and `normal`. In `quick` mode, precomputed threshold is used, whereas in `normal` mode, threshold is computed again. `quick` mode is recommanded if you want short running time and dataset is still YouTube Aligned Face Dataset.
 
