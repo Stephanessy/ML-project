@@ -16,8 +16,8 @@
         ├── process_data.py
         └── super_impose.py
 ├── architecture.py
-├── eval.py // this is the evaluation script
-└── strip_eval.py // use strip to repair the model
+├── eval.py // this is the given evaluation script
+└── strip_eval.py // Our implementation to use strip to detect backdoored data and output N+1 class.
 ```
 
 ## I. Dependencies
@@ -42,7 +42,7 @@
    3. Clean data classification accuracy on the provided validation dataset for sunglasses_bd_net.h5 is 97.87 %.
 
 ## IV. Evaluating STRIP method 
-   1. The threshold is the same for all models. You can either use the precomputed threshold or compute the threshold again (you will get the same threshold anyway)
+   1. The threshold is the same for all models if the data set range is the same. You can either use the precomputed threshold or compute the new threshold again.
    2. To evaluate the backdoored model, execute `strip_eval.py` by running:  
       `python3 strip_eval.py <clean validation data directory> <test data directory> <model directory> <mode>`.
       
