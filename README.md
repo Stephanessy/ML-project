@@ -1,4 +1,8 @@
-# CSAW-HackML-2020 (Course project of ECE-GY 9163)
+# Course project of ECE-GY 9163: Backdoor detection (based on CSAW-HackML-2020)
+
+Goal: The repaired networks take as input a YouTube Face image and outputs N+1 classes, where the N+1 class represents a backdoored inputs.
+
+Please note that we have tried to implement two method: a STRIP based method & a Fine-Prunning based method
 
 ```bash
 ├── README.md
@@ -51,12 +55,13 @@
    3. Clean data classification accuracy on the provided validation dataset for sunglasses_bd_net.h5 is 97.87 %.
 
 ## IV. Evaluating STRIP method 
-   1. The threshold is the same for all models. You can either use the precomputed threshold or compute the threshold again (you will get the same threshold anyway)
+   1. The threshold is the same for all models if the data set range is the same. You can either use the precomputed threshold or compute the new threshold again.
    2. To evaluate the backdoored model, execute `strip_eval.py` by running:  
       `python3 strip_eval.py <clean validation data directory> <test data directory> <model directory> <mode>`.
       
       E.g., `python3 strip_eval.py data/clean_validation_data.h5 data/sunglasses_poisoned_data.h5 models/sunglasses_bd_net.h5 quick`.
-   3. There are 2 modes provided: `quick` and `normal`. In `quick` mode, precomputed threshold is used, whereas in `normal` mode, threshold is computed again. `quick` mode is highly recommanded.
+   3. There are 2 modes provided: `quick` and `normal`. In `quick` mode, precomputed threshold is used, whereas in `normal` mode, threshold is computed again. `quick` mode is recommanded if you want short running time and dataset is still YouTube Aligned Face Dataset.
+   4. Please note that `result` at last of `strip_eval.py` is the output array with N+1 classes, meanwhile it will output a .csv file with results.
 
 ## V. Evaluating Fine-Pruning method 
 
