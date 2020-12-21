@@ -11,7 +11,7 @@
     ├── sunglasses_bd_net.h5
     └── sunglasses_bd_weights.h5
 ├── utils
-    └── strip //record functions used in STRIP method.
+    └── strip //function dependencies used in strip_eval.py
 	├── entropy_cal.py
         ├── process_data.py
         └── super_impose.py
