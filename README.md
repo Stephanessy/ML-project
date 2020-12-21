@@ -9,8 +9,6 @@ Please note that we have tried to implement two method: a STRIP based method & a
 ├── architecture.py
 ├── data
 │   └── data.txt
-├── eval.py
-├── fine_pruning_eval.py
 ├── models
 │   ├── anonymous_bd_net.h5
 │   ├── anonymous_bd_weights.h5
@@ -18,17 +16,20 @@ Please note that we have tried to implement two method: a STRIP based method & a
 │   ├── multi_trigger_multi_target_bd_weights.h5
 │   ├── sunglasses_bd_net.h5
 │   └── sunglasses_bd_weights.h5
-├── strip_eval.py
-└── utils
-    ├── fine_pruning
+├── report // containing report.pdf and related LaTex files
+├── utils
+    ├── fine_pruning  // function dependencies used in fine_pruning_eval.py
     │   ├── __init__.py
     │   ├── backdoor_detector_fine_pruning.ipynb
     │   └── fine_pruning.py
-    └── strip
+    └── strip  // function dependencies used in strip_eval.py
         ├── __init__.py
         ├── entropy_cal.py
         ├── process_data.py
         └── super_impose.py
+├── eval.py  // this is the given evaluation script
+├── fine_pruning_eval.py  // Our implementation to use fine pruning to detect backdoored data and output N+1 class.
+└── strip_eval.py  // Our implementation to use strip to detect backdoored data and output N+1 class.
 ```
 
 ## I. Dependencies
