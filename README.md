@@ -1,4 +1,8 @@
-# CSAW-HackML-2020 (Course project of ECE-GY 9163)
+# Course project of ECE-GY 9163: Backdoor detection (based on CSAW-HackML-2020)
+
+Goal: The repaired networks take as input a YouTube Face image and outputs N+1 classes, where the N+1 class represents a backdoored inputs.
+
+Please note that we have tried to implement two method: a STRIP based method & a Fine-Prunning based method
 
 ```bash
 ├── data 
