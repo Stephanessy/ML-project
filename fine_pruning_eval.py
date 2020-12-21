@@ -52,7 +52,7 @@ def repairnet_predict(test_input, valid_set, repairdmodel):
         test_input = np.asarray(test_input).reshape((1, 55, 47, 3))
         # print(test_input.shape)
         predicted_label = int(np.argmax(repairdmodel.predict(test_input), axis=1))
-        return predicted_label
+        return predicted_label + 1
     else:
         return N+1
 
