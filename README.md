@@ -10,6 +10,7 @@
     ├── anonymous_bd_weights.h5
     ├── sunglasses_bd_net.h5
     └── sunglasses_bd_weights.h5
+├── report //containing report.pdf and related LaTex files
 ├── utils
     └── strip //function dependencies used in strip_eval.py
 	├── entropy_cal.py
