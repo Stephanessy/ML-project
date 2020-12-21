@@ -80,7 +80,8 @@ def main():
         print("Use computed threshold.")
 
     print("Testing...")
-    result = test(bd_model, x_test, x_valid, threshold)
+    #output N+1 classes
+    result = test(bd_model, x_test, x_valid, threshold) 
     # Save the results
     csv_file = pd.DataFrame({"repaired predictions": result})
     csv_file.to_csv("results.csv", index=True)
