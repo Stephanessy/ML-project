@@ -33,8 +33,9 @@
    3. Numpy 1.19.4
    4. Matplotlib 3.2.2
    5. H5py 2.10.0
-   6. TensorFlow-gpu <= 2.3.0
-      7. keract 4.4.3
+   6. TensorFlow <= 2.3.0
+   7. TensorFlow-gpu <= 2.3.0
+   8. keract 4.4.3
 
 ## II. Validation Data
    1. Download the validation and test datasets from [here](https://drive.google.com/drive/folders/13o2ybRJ1BkGUvfmQEeZqDo1kskyFywab?usp=sharing) and store them under `data/` directory.
