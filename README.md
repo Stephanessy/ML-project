@@ -9,6 +9,9 @@ Please note that we have tried to implement two method: a STRIP based method & a
 ├── architecture.py
 ├── data
 │   └── data.txt
+├── jupyter notebook
+│   ├── backdoor_detector_fine_pruning.ipynb
+│   └── ML_Cyber_Security_STRIP.ipynb
 ├── models
 │   ├── anonymous_bd_net.h5
 │   ├── anonymous_bd_weights.h5
