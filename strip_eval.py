@@ -39,7 +39,7 @@ def test(model, x_test, x_valid_clean, thresh):
     for idx in bad_idx:
         result[idx] = bad_class
     print("Finish!")
-    return np.array(result) + 1  # i-index
+    return np.array(result) + 1  # 1-index
 
 
 def main():
